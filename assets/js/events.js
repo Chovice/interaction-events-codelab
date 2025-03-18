@@ -11,7 +11,11 @@ const mySubButton = document.getElementById('subtractButton');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-
+EventListener = () => {
+    myAddButton.addEventListener('click', addValue);
+    mySubButton.addEventListener('click', subtractValue);
+}
+EventListener();
 
 
 //-------------------------------------------------------------------------
@@ -50,8 +54,11 @@ const diceButton = document.getElementById('rollDiceOne');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-
-
+function rollDice() {
+    let diceRoll = getRandomNumber(1, 6);
+    showResult(diceRoll, myDiceRes)
+}
+diceButton.addEventListener('click', rollDice);
 
 //-------------------------------------------------------------------------
 
@@ -70,7 +77,10 @@ let myLiveTextResult = document.getElementById('tasteResult');
 
 // skriv din eventhandler kode her ---------------------------------------
 
-
+function keyEvent(event) {
+    myLiveTextResult.innerHTML = event.key;
+} 
+myLiveText.addEventListener('keydown', keyEvent);
 
 
 //-------------------------------------------------------------------------
