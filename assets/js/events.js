@@ -55,7 +55,7 @@ const diceButton = document.getElementById('rollDiceOne');
 // skriv din eventhandler kode her ---------------------------------------
 
 function rollDice() {
-    let diceRoll = getRandomNumber(1, 6);
+    let diceRoll = getRandomNumber(1, 7);
     showResult(diceRoll, myDiceRes)
 }
 diceButton.addEventListener('click', rollDice);
